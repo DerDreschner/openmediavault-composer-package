@@ -1,19 +1,24 @@
 {
-    "name": "derdreschner/openmediavault-composer-package",
-    "description": "Repository for providing an installable composer package of OpenMediaVault (e.g., for using unit tests or developing addons).",
-    "type": "library",
-    "license": "GPL-3.0",
-    "authors": [
-        {
-            "name": "David Dreschner",
-            "email": "github-2017@dreschner.net"
-        }
-    ],
-
-    "autoload": {
-        "classmap": ["src/php/*"]
-    },
-
-    "include-path": ["src/php"],
-    "require": {}
+  "name": "derdreschner/openmediavault-composer-package",
+  "description": "Repository for providing an installable composer package of OpenMediaVault (e.g., for using unit tests or developing addons).",
+  "type": "library",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "David Dreschner",
+      "email": "github-2017@dreschner.net"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "src/php/openmediavault"
+    ]
+  },
+  "include-path": [
+    "src/php"
+  ],
+  "require": {
+    "php": "^8.2",
+    "ext-mbstring": "*"
+  }
 }
