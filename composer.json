@@ -19,6 +19,17 @@
   ],
   "require": {
     "php": "^8.2",
-    "ext-mbstring": "*"
+    "ext-sockets": "*",
+    "ext-mbstring": "*",
+    "ext-bcmath": "*",
+    "ext-posix": "*",
+    "ext-gettext": "*",
+    "ext-dom": "*",
+    "ext-libxml": "*",
+    "ext-pcntl": "*",
+    "ext-yaml": "*",
+    "ext-sysvsem": "*",
+    "ext-fileinfo": "*",
+    "ext-simplexml": "*"
   }
 }
