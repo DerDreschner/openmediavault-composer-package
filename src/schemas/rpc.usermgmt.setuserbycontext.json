@@ -1,0 +1,1 @@
+{"type":"object","properties":{"password":{"type":"string","required":false},"email":{"type":"string","oneOf":[{"type":"string","format":"email"},{"type":"string","maxLength":0}],"required":true},"comment":{"type":"string","required":true}}}

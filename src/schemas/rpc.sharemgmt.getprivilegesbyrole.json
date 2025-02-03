@@ -1,0 +1,1 @@
+{"type":"object","properties":{"role":{"type":"string","enum":["user","group"],"required":true},"name":{"type":"string","required":true}}}

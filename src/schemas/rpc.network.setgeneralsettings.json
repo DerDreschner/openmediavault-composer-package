@@ -1,0 +1,1 @@
+{"type":"object","properties":{"hostname":{"type":"string","format":"hostname","required":true},"domainname":{"type":"string","oneOf":[{"type":"string","format":"domainname"},{"type":"string","maxLength":0}],"required":true}}}

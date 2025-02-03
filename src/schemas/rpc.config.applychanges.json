@@ -1,0 +1,1 @@
+{"type":"object","properties":{"modules":{"type":"array","items":{"type":"string"},"required":true},"force":{"type":"boolean","required":true}}}

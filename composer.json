@@ -31,5 +31,8 @@
     "ext-sysvsem": "*",
     "ext-fileinfo": "*",
     "ext-simplexml": "*"
+  },
+  "require-dev": {
+    "illuminate/collections": "*"
   }
 }

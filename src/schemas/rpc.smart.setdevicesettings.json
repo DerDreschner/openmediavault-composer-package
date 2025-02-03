@@ -1,0 +1,1 @@
+{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"devicefile":{"type":"string","format":"devicefile","required":true},"enable":{"type":"boolean","required":true}}}

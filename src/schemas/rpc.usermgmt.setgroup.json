@@ -1,0 +1,1 @@
+{"type":"object","properties":{"name":{"type":"string","required":true},"gid":{"type":"integer","required":false},"comment":{"type":"string","required":true},"members":{"type":"array","items":{"type":"string"},"required":true}}}
