@@ -94,6 +94,6 @@ class RoboFile extends Tasks
         $matches = [];
         preg_match($regex, $content, $matches);
         $sanitizedJson = $sanitizeJson($matches[1]);
-        return Comment::parse($sanitizedJson, true)["properties"];
+        return Comment::parse($sanitizedJson, true);
     }
 }
