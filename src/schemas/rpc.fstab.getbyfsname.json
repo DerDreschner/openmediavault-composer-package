@@ -1,1 +1,1 @@
-{"type":"object","properties":{"fsname":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"},{"type":"string","format":"dirpath"}],"required":true}}}
+{"type":"object","properties":{"fsname":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"},{"type":"string","format":"dirpath"}]},"required":["fsname"]}}

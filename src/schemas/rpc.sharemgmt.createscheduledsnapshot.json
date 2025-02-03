@@ -1,1 +1,1 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4","required":true},"execution":{"type":"string","required":true,"enum":["hourly","daily","weekly","monthly","yearly"]}}}
+{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"execution":{"type":"string","enum":["hourly","daily","weekly","monthly","yearly"]},"required":["uuid","execution"]}}

@@ -1,1 +1,1 @@
-{"type":"object","properties":{"timestamp":{"type":"integer","minimum":0,"required":true}}}
+{"type":"object","properties":{"timestamp":{"type":"integer","minimum":0},"required":["timestamp"]}}

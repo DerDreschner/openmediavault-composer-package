@@ -1,1 +1,1 @@
-{"type":"object","properties":{"cpufreq":{"type":"boolean","required":true},"powerbtn":{"type":"string","required":true,"enum":["nothing","shutdown","standby"]}}}
+{"type":"object","properties":{"cpufreq":{"type":"boolean"},"powerbtn":{"type":"string","enum":["nothing","shutdown","standby"]},"required":["cpufreq","powerbtn"]}}

@@ -1,1 +1,1 @@
-{"type":"object","properties":{"enable":{"type":"boolean","required":true},"sharedfolderref":{"type":"string","oneOf":[{"type":"string","format":"uuidv4"},{"type":"string","maxLength":0}],"required":true}}}
+{"type":"object","properties":{"enable":{"type":"boolean"},"sharedfolderref":{"type":"string","oneOf":[{"type":"string","format":"uuidv4"},{"type":"string","maxLength":0}]},"required":["enable","sharedfolderref"]}}

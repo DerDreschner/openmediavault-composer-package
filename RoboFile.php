@@ -23,6 +23,30 @@ class RoboFile extends Tasks
         $this->_cleanDir(SCHEMES_DIRECTORY_PATH);
     }
 
+    private function fixRequiredAttribute(&$array): void
+    {
+        $requiredProperties = [];
+
+        foreach ($array as $key => &$value) {
+            if(is_array($value)) {
+                foreach ($value as $key2 => &$value2) {
+                    if(is_array($value2)) {
+                        $this->fixRequiredAttribute($value2);
+                    }
+
+                    if($key2 == "required") {
+                        $requiredProperties[] = $key;
+                        unset($value["required"]);
+                    }
+                }
+            }
+        }
+
+        if(count($requiredProperties) > 0) {
+            $array["required"] = $requiredProperties;
+        }
+    }
+
     private function GenerateRpcSchemes(): void
     {
         $isRpcFile = function ($callback): bool {
@@ -38,6 +62,8 @@ class RoboFile extends Tasks
             $isSingleSchemeFile = $content->keys()->contains("params");
 
             $exportScheme = function ($content): void {
+                $this->fixRequiredAttribute($content);
+
                 $filename = $content["id"] . ".json";
                 $attributes = json_encode($content["params"]);
 
@@ -63,6 +89,8 @@ class RoboFile extends Tasks
 
             $regex = "/{$type}_schema = openmediavault.datamodel.Schema\(([^)]*)\)/";
             $scheme = $this->ExtractUiScheme($regex, $python_script);
+
+            $this->fixRequiredAttribute($scheme);
 
             $filename = $type . ".json";
             $filepath = SCHEMES_DIRECTORY_PATH . DIRECTORY_SEPARATOR . $filename;

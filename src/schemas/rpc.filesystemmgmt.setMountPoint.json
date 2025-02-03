@@ -1,1 +1,1 @@
-{"type":"object","properties":{"id":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"}],"required":true},"usagewarnthreshold":{"type":"number","minimum":0,"maximum":100,"required":false},"comment":{"type":"string","required":false}}}
+{"type":"object","properties":{"id":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"}]},"usagewarnthreshold":{"type":"number","minimum":0,"maximum":100},"comment":{"type":"string"},"required":["id","usagewarnthreshold","comment"]}}

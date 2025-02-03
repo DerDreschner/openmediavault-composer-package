@@ -1,1 +1,1 @@
-{"type":"object","properties":{"devicename":{"type":"string","required":true}}}
+{"type":"object","properties":{"devicename":{"type":"string"},"required":["devicename"]}}

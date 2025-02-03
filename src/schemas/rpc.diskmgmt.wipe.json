@@ -1,1 +1,1 @@
-{"type":"object","properties":{"devicefile":{"type":"string","format":"devicefile","required":true},"secure":{"type":"boolean","required":true}}}
+{"type":"object","properties":{"devicefile":{"type":"string","format":"devicefile"},"secure":{"type":"boolean"},"required":["devicefile","secure"]}}

@@ -1,1 +1,1 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4","required":true},"certificate":{"type":"string","required":true},"privatekey":{"type":"string","required":false},"comment":{"type":"string","required":true}}}
+{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"certificate":{"type":"string"},"privatekey":{"type":"string"},"comment":{"type":"string"},"required":["uuid","certificate","privatekey","comment"]}}
