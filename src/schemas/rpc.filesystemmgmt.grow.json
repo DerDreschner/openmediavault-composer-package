@@ -1,1 +1,1 @@
-{"type":"object","properties":{"id":{"type":"string","format":"fsuuid"},"required":["id"]}}
+{"type":"object","properties":{"id":{"type":"string","format":"fsuuid","required":true}}}

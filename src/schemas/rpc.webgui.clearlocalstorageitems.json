@@ -1,1 +1,1 @@
-{"type":"object","properties":{"devicetype":{"type":"string","enum":["desktop","mobile"]},"required":["devicetype"]}}
+{"type":"object","properties":{"devicetype":{"type":"string","enum":["desktop","mobile"],"required":true}}}

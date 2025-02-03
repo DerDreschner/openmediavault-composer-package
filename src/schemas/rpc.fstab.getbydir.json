@@ -1,1 +1,1 @@
-{"type":"object","properties":{"dir":{"type":"string"},"required":["dir"]}}
+{"type":"object","properties":{"dir":{"type":"string","required":true}}}

@@ -1,1 +1,1 @@
-{"type":"object","properties":{"id":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"}]},"required":["id"]}}
+{"type":"object","properties":{"id":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"}],"required":true}}}

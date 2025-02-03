@@ -1,1 +1,1 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"id":{"type":["string","integer"]},"required":["uuid","id"]}}
+{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4","required":true},"id":{"type":["string","integer"],"required":true}}}

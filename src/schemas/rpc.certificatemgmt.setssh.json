@@ -1,1 +1,1 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"publickey":{"type":"string","format":"sshpubkey-openssh"},"privatekey":{"type":"string","format":"sshprivkey-pem"},"comment":{"type":"string"},"required":["uuid","publickey","privatekey","comment"]}}
+{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4","required":true},"publickey":{"type":"string","format":"sshpubkey-openssh","required":true},"privatekey":{"type":"string","format":"sshprivkey-pem","required":false},"comment":{"type":"string","required":true}}}

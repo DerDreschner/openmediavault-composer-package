@@ -25,25 +25,23 @@ class RoboFile extends Tasks
 
     private function fixRequiredAttribute(&$array): void
     {
-        $requiredProperties = [];
+        foreach ($array as &$value) {
+            $requiredProperties = [];
 
-        foreach ($array as $key => &$value) {
             if(is_array($value)) {
                 foreach ($value as $key2 => &$value2) {
-                    if(is_array($value2)) {
+                    if(is_array($value2) && array_key_exists("required", $value2)) {
+                        $requiredProperties[] = $key2;
+                        unset($value[$key2]["required"]);
+                    } else if(is_array($value2)) {
                         $this->fixRequiredAttribute($value2);
-                    }
-
-                    if($key2 == "required") {
-                        $requiredProperties[] = $key;
-                        unset($value["required"]);
                     }
                 }
             }
-        }
 
-        if(count($requiredProperties) > 0) {
-            $array["required"] = $requiredProperties;
+            if(count($requiredProperties) > 0) {
+                $array["required"] = $requiredProperties;
+            }
         }
     }
 

@@ -1,1 +1,1 @@
-{"type":"object","properties":{"filename":{"type":"string"},"required":["filename"]}}
+{"type":"object","properties":{"filename":{"type":"string","required":false}}}
