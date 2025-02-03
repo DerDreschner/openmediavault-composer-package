@@ -4,6 +4,7 @@ const DATAMODEL_DIRECTORY_PATH = "./src/datamodels";
 const SCHEMES_DIRECTORY_PATH = "./src/schemas";
 const MK_WORKBENCH_PATH = "./omv-mkworkbench";
 
+use Ahc\Json\Comment;
 use Robo\Tasks;
 
 require_once("vendor/autoload.php");
@@ -32,15 +33,15 @@ class RoboFile extends Tasks
             print_r("Exporting schemes from $filename..." . PHP_EOL);
 
             $filepath = DATAMODEL_DIRECTORY_PATH . DIRECTORY_SEPARATOR . $filename;
-            $content = collect(json_decode(file_get_contents($filepath), true));
+            $content = collect(Comment::parse(file_get_contents($filepath), true));
 
             $isSingleSchemeFile = $content->keys()->contains("params");
 
             $exportScheme = function ($content): void {
                 $filename = $content["id"] . ".json";
-                $filepath = SCHEMES_DIRECTORY_PATH . DIRECTORY_SEPARATOR . $filename;
-
                 $attributes = json_encode($content["params"]);
+
+                $filepath = SCHEMES_DIRECTORY_PATH . DIRECTORY_SEPARATOR . $filename;
 
                 file_put_contents($filepath, $attributes);
             };
@@ -71,6 +72,7 @@ class RoboFile extends Tasks
         };
 
         $python_script = file_get_contents(MK_WORKBENCH_PATH);
+        $extractScheme("component", $python_script);
         $extractScheme("widget", $python_script);
         $extractScheme("navigation", $python_script);
         $extractScheme("route", $python_script);
@@ -86,16 +88,12 @@ class RoboFile extends Tasks
             $string = preg_replace("/False/", "false", $string);
 
             // Fix single quoted strings
-            $string = preg_replace("/'+/", "\"", $string);
-
-            // Remove newline control characters
-            return str_replace(PHP_EOL, "", $string);
+            return preg_replace("/'+/", "\"", $string);
         };
 
         $matches = [];
         preg_match($regex, $content, $matches);
         $sanitizedJson = $sanitizeJson($matches[1]);
-
-        return json_decode($sanitizedJson, true)["properties"];
+        return Comment::parse($sanitizedJson, true)["properties"];
     }
 }

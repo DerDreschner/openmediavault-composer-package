@@ -34,6 +34,7 @@
   },
   "require-dev": {
     "illuminate/collections": "*",
-    "consolidation/robo": "^5.1"
+    "consolidation/robo": "^5.1",
+    "adhocore/json-comment": "^1.2"
   }
 }
