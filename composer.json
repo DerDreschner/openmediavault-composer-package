@@ -33,6 +33,7 @@
     "ext-simplexml": "*"
   },
   "require-dev": {
-    "illuminate/collections": "*"
+    "illuminate/collections": "*",
+    "consolidation/robo": "^5.1"
   }
 }

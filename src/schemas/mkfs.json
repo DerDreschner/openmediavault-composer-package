@@ -1,0 +1,1 @@
+{"version":{"type":"string","required":true},"type":{"type":"string","enum":["mkfs"],"required":true},"data":{"type":"object","properties":{"text":{"type":"string","required":true},"url":{"type":"string","required":true}}}}
