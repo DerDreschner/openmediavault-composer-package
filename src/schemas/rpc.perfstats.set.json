@@ -1,1 +1,1 @@
-{"type":"object","properties":{"enable":{"type":"boolean","required":true}}}
+{"type":"object","properties":{"enable":{"type":"boolean"}},"required":["enable"]}

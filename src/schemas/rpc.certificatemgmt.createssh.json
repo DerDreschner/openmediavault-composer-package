@@ -1,1 +1,1 @@
-{"type":"object","properties":{"type":{"type":"string","enum":["rsa","ed25519"],"required":true},"comment":{"type":"string"}}}
+{"type":"object","properties":{"type":{"type":"string","enum":["rsa","ed25519"]},"comment":{"type":"string"}},"required":["type"]}

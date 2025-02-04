@@ -1,1 +1,1 @@
-{"type":"object","properties":{"timezone":{"type":"string","required":true},"ntpenable":{"type":"boolean","required":true},"ntptimeservers":{"type":"string","required":true},"ntpclients":{"type":"string","required":false}}}
+{"type":"object","properties":{"timezone":{"type":"string"},"ntpenable":{"type":"boolean"},"ntptimeservers":{"type":"string"},"ntpclients":{"type":"string"}},"required":["timezone","ntpenable","ntptimeservers","ntpclients"]}

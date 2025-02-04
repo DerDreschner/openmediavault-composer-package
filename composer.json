@@ -15,6 +15,7 @@
     ]
   },
   "include-path": [
+    ".",
     "src/php"
   ],
   "require": {
@@ -35,6 +36,8 @@
   "require-dev": {
     "illuminate/collections": "*",
     "consolidation/robo": "^5.1",
-    "adhocore/json-comment": "^1.2"
+    "adhocore/json-comment": "^1.2",
+    "phpunit/phpunit": "^11.5",
+    "opis/json-schema": "^2.4"
   }
 }
