@@ -118,7 +118,7 @@ class SchemeExtractor
                     ];
                 }
 
-                if ($key == "required") {
+                if ($key == "required" || $key == "required_overwritten") {
                     $callstack->rewind();
                     $requiredElement = $callstack->current()["key"];
 
@@ -132,10 +132,11 @@ class SchemeExtractor
 
                         if ($potentialKey == "properties") {
                             if (array_key_exists($key, $potentialParent) && is_bool($potentialParent[$key])) {
+                                $potentialParent["required_overwritten"] = true;
                                 unset($potentialParent[$key]);
                             }
 
-                            $potentialParent[$key][] = $requiredElement;
+                            $potentialParent["required"][] = $requiredElement;
                             unset($item[$key]);
 
                             $elementToAppendFound = true;
