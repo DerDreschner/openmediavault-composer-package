@@ -1,1 +1,11 @@
-{"type":"object","properties":{"csv":{"type":"string"}},"required":["csv"]}
+{
+    "type": "object",
+    "properties": {
+        "csv": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "csv"
+    ]
+}

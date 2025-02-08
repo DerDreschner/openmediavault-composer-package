@@ -1,1 +1,14 @@
-{"type":"object","properties":{"modules":{"type":"array","items":{"type":"string"}}},"required":["modules"]}
+{
+    "type": "object",
+    "properties": {
+        "modules": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "modules"
+    ]
+}

@@ -1,1 +1,75 @@
-{"type":"array","items":{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"rulenum":{"type":"integer","minimum":0},"chain":{"type":"string","enum":["INPUT","OUTPUT"]},"action":{"type":"string","enum":["ACCEPT","REJECT","DROP","LOG",""]},"family":{"type":"string","enum":["inet6"]},"source":{"type":"string"},"sport":{"type":"string"},"destination":{"type":"string"},"dport":{"type":"string"},"protocol":{"type":"string","pattern":"^(!?(tcp|udp|icmpv6))|all$"},"extraoptions":{"type":"string"},"comment":{"type":"string"}},"required":["uuid","rulenum","chain","action","family","source","sport","destination","dport","protocol","extraoptions","comment"]}}
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "uuid": {
+                "type": "string",
+                "format": "uuidv4"
+            },
+            "rulenum": {
+                "type": "integer",
+                "minimum": 0
+            },
+            "chain": {
+                "type": "string",
+                "enum": [
+                    "INPUT",
+                    "OUTPUT"
+                ]
+            },
+            "action": {
+                "type": "string",
+                "enum": [
+                    "ACCEPT",
+                    "REJECT",
+                    "DROP",
+                    "LOG",
+                    ""
+                ]
+            },
+            "family": {
+                "type": "string",
+                "enum": [
+                    "inet6"
+                ]
+            },
+            "source": {
+                "type": "string"
+            },
+            "sport": {
+                "type": "string"
+            },
+            "destination": {
+                "type": "string"
+            },
+            "dport": {
+                "type": "string"
+            },
+            "protocol": {
+                "type": "string",
+                "pattern": "^(!?(tcp|udp|icmpv6))|all$"
+            },
+            "extraoptions": {
+                "type": "string"
+            },
+            "comment": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "uuid",
+            "rulenum",
+            "chain",
+            "action",
+            "family",
+            "source",
+            "sport",
+            "destination",
+            "dport",
+            "protocol",
+            "extraoptions",
+            "comment"
+        ]
+    }
+}

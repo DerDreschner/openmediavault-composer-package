@@ -1,1 +1,9 @@
-{"type":"object","properties":{"delay":{"type":"integer","minimum":0}}}
+{
+    "type": "object",
+    "properties": {
+        "delay": {
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

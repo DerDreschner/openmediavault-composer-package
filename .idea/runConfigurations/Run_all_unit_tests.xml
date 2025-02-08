@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run all unit tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+    <CommandLine parameters="-d memory_limit=256M" workingDirectory="$PROJECT_DIR$" />
+    <TestRunner class="DerDreschner\OpenMediaVault\ComposerPackage\Tests\UnitTests\SchemeExtractorTest" directory="$PROJECT_DIR$/tests/unit" file="$PROJECT_DIR$/tests/unit/SchemeExtractorTest.php" method="convertDraft3JsonSchemaTest" />
+    <method v="2" />
+  </configuration>
+</component>

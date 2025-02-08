@@ -2,7 +2,7 @@
   "name": "derdreschner/openmediavault-composer-package",
   "description": "Repository for providing an installable composer package of OpenMediaVault (e.g., for using unit tests or developing addons).",
   "type": "library",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "David Dreschner",
@@ -11,13 +11,22 @@
   ],
   "autoload": {
     "classmap": [
-      "src/php/openmediavault"
+      "src/openmediavault"
     ]
   },
+  "autoload-dev": {
+    "psr-4": {
+      "DerDreschner\\OpenMediaVault\\ComposerPackage\\Tests\\Fixtures\\": "tests/fixture",
+      "DerDreschner\\OpenMediaVault\\ComposerPackage\\Tests\\UnitTests\\": "tests/unit",
+      "DerDreschner\\OpenMediaVault\\ComposerPackage\\Tests\\IntegrationTests\\": "tests/integration"
+    }
+  },
   "include-path": [
-    ".",
-    "src/php"
+    "src/openmediavault"
   ],
+  "archive": {
+    "exclude": [".devcontainer", "/src/SchemeExtractor.php", "/tests", "RoboFile.php"]
+  },
   "require": {
     "php": "^8.2",
     "ext-sockets": "*",
@@ -38,6 +47,8 @@
     "consolidation/robo": "^5.1",
     "adhocore/json-comment": "^1.2",
     "phpunit/phpunit": "^11.5",
-    "opis/json-schema": "^2.4"
+    "opis/json-schema": "^2.4",
+    "mikey179/vfsstream": "^1.6",
+    "jetbrains/phpstorm-attributes": "^1.2"
   }
 }

@@ -1,1 +1,26 @@
-{"type":"object","properties":{"hostname":{"type":"string","format":"hostname"},"domainname":{"type":"string","oneOf":[{"type":"string","format":"domainname"},{"type":"string","maxLength":0}]}},"required":["hostname","domainname"]}
+{
+    "type": "object",
+    "properties": {
+        "hostname": {
+            "type": "string",
+            "format": "hostname"
+        },
+        "domainname": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "domainname"
+                },
+                {
+                    "type": "string",
+                    "maxLength": 0
+                }
+            ]
+        }
+    },
+    "required": [
+        "hostname",
+        "domainname"
+    ]
+}

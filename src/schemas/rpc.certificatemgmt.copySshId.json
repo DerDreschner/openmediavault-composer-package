@@ -1,1 +1,30 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"hostname":{"type":"string"},"port":{"type":"integer","minimum":1,"maximum":65535},"username":{"type":"string"},"password":{"type":"string"}},"required":["uuid","hostname","port","username","password"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "hostname": {
+            "type": "string"
+        },
+        "port": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535
+        },
+        "username": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "uuid",
+        "hostname",
+        "port",
+        "username",
+        "password"
+    ]
+}

@@ -1,1 +1,61 @@
-{"type":"object","properties":{"size":{"type":"integer","enum":[512,1024,2048,4096]},"days":{"type":"integer"},"c":{"type":"string","maxLength":2},"st":{"type":"string"},"l":{"type":"string"},"o":{"type":"string"},"ou":{"type":"string"},"cn":{"type":"string","minLength":1},"email":{"type":"string","oneOf":[{"type":"string","format":"email"},{"type":"string","maxLength":0}]}},"required":["size","days","c","st","l","o","ou","cn","email"]}
+{
+    "type": "object",
+    "properties": {
+        "size": {
+            "type": "integer",
+            "enum": [
+                512,
+                1024,
+                2048,
+                4096
+            ]
+        },
+        "days": {
+            "type": "integer"
+        },
+        "c": {
+            "type": "string",
+            "maxLength": 2
+        },
+        "st": {
+            "type": "string"
+        },
+        "l": {
+            "type": "string"
+        },
+        "o": {
+            "type": "string"
+        },
+        "ou": {
+            "type": "string"
+        },
+        "cn": {
+            "type": "string",
+            "minLength": 1
+        },
+        "email": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "email"
+                },
+                {
+                    "type": "string",
+                    "maxLength": 0
+                }
+            ]
+        }
+    },
+    "required": [
+        "size",
+        "days",
+        "c",
+        "st",
+        "l",
+        "o",
+        "ou",
+        "cn",
+        "email"
+    ]
+}

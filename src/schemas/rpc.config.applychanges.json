@@ -1,1 +1,18 @@
-{"type":"object","properties":{"modules":{"type":"array","items":{"type":"string"}},"force":{"type":"boolean"}},"required":["modules","force"]}
+{
+    "type": "object",
+    "properties": {
+        "modules": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "force": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "modules",
+        "force"
+    ]
+}

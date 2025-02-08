@@ -1,1 +1,271 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"enable":{"type":"boolean"},"sendemail":{"type":"boolean"},"comment":{"type":"string"},"type":{"type":"string","enum":["local","remote"]},"srcsharedfolderref":{"type":"string","oneOf":[{"type":"string","format":"uuidv4"},{"type":"string","maxLength":0}]},"srcuri":{"type":"string"},"destsharedfolderref":{"type":"string","oneOf":[{"type":"string","format":"uuidv4"},{"type":"string","maxLength":0}]},"desturi":{"type":"string"},"minute":{"type":"array","items":{"type":"string","oneOf":[{"type":"string","enum":["*"]},{"type":"string","pattern":"^[0-9]|[1-5][0-9]$"}]}},"everynminute":{"type":"boolean"},"hour":{"type":"array","items":{"type":"string","oneOf":[{"type":"string","enum":["*"]},{"type":"string","pattern":"^[0-9]|1[0-9]|2[0-3]$"}]}},"everynhour":{"type":"boolean"},"month":{"type":"array","items":{"type":"string","oneOf":[{"type":"string","enum":["*"]},{"type":"string","pattern":"^[1-9]|1[0-2]$"}]}},"dayofmonth":{"type":"array","items":{"type":"string","oneOf":[{"type":"string","enum":["*"]},{"type":"string","pattern":"^[1-9]|[12][0-9]|3[01]$"}]}},"everyndayofmonth":{"type":"boolean"},"dayofweek":{"type":"array","items":{"type":"string","oneOf":[{"type":"string","enum":["*"]},{"type":"string","pattern":"^[1-7]$"}]}},"optionrecursive":{"type":"boolean"},"optiontimes":{"type":"boolean"},"optiongroup":{"type":"boolean"},"optionowner":{"type":"boolean"},"optioncompress":{"type":"boolean"},"optionarchive":{"type":"boolean"},"optiondelete":{"type":"boolean"},"optionquiet":{"type":"boolean"},"optionperms":{"type":"boolean"},"optionacls":{"type":"boolean"},"optionxattrs":{"type":"boolean"},"optiondryrun":{"type":"boolean"},"optionpartial":{"type":"boolean"},"extraoptions":{"type":"string"},"mode":{"type":"string","enum":["push","pull"]},"authentication":{"type":"string","enum":["password","pubkey"]},"password":{"type":"string"},"sshcertificateref":{"type":"string","oneOf":[{"type":"string","format":"uuidv4"},{"type":"string","maxLength":0}]},"sshport":{"type":"integer","minimum":1,"maximum":65535}},"required":["uuid","enable","sendemail","comment","type","srcsharedfolderref","srcuri","destsharedfolderref","desturi","minute","everynminute","hour","everynhour","month","dayofmonth","everyndayofmonth","dayofweek","optionrecursive","optiontimes","optiongroup","optionowner","optioncompress","optionarchive","optiondelete","optionquiet","optionperms","optionacls","optionxattrs","optiondryrun","optionpartial","extraoptions","mode","authentication","password","sshcertificateref","sshport"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "enable": {
+            "type": "boolean"
+        },
+        "sendemail": {
+            "type": "boolean"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "local",
+                "remote"
+            ]
+        },
+        "srcsharedfolderref": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uuidv4"
+                },
+                {
+                    "type": "string",
+                    "maxLength": 0
+                }
+            ]
+        },
+        "srcuri": {
+            "type": "string"
+        },
+        "destsharedfolderref": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uuidv4"
+                },
+                {
+                    "type": "string",
+                    "maxLength": 0
+                }
+            ]
+        },
+        "desturi": {
+            "type": "string"
+        },
+        "minute": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "enum": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "^[0-9]|[1-5][0-9]$"
+                    }
+                ]
+            }
+        },
+        "everynminute": {
+            "type": "boolean"
+        },
+        "hour": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "enum": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "^[0-9]|1[0-9]|2[0-3]$"
+                    }
+                ]
+            }
+        },
+        "everynhour": {
+            "type": "boolean"
+        },
+        "month": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "enum": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "^[1-9]|1[0-2]$"
+                    }
+                ]
+            }
+        },
+        "dayofmonth": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "enum": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "^[1-9]|[12][0-9]|3[01]$"
+                    }
+                ]
+            }
+        },
+        "everyndayofmonth": {
+            "type": "boolean"
+        },
+        "dayofweek": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "enum": [
+                            "*"
+                        ]
+                    },
+                    {
+                        "type": "string",
+                        "pattern": "^[1-7]$"
+                    }
+                ]
+            }
+        },
+        "optionrecursive": {
+            "type": "boolean"
+        },
+        "optiontimes": {
+            "type": "boolean"
+        },
+        "optiongroup": {
+            "type": "boolean"
+        },
+        "optionowner": {
+            "type": "boolean"
+        },
+        "optioncompress": {
+            "type": "boolean"
+        },
+        "optionarchive": {
+            "type": "boolean"
+        },
+        "optiondelete": {
+            "type": "boolean"
+        },
+        "optionquiet": {
+            "type": "boolean"
+        },
+        "optionperms": {
+            "type": "boolean"
+        },
+        "optionacls": {
+            "type": "boolean"
+        },
+        "optionxattrs": {
+            "type": "boolean"
+        },
+        "optiondryrun": {
+            "type": "boolean"
+        },
+        "optionpartial": {
+            "type": "boolean"
+        },
+        "extraoptions": {
+            "type": "string"
+        },
+        "mode": {
+            "type": "string",
+            "enum": [
+                "push",
+                "pull"
+            ]
+        },
+        "authentication": {
+            "type": "string",
+            "enum": [
+                "password",
+                "pubkey"
+            ]
+        },
+        "password": {
+            "type": "string"
+        },
+        "sshcertificateref": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uuidv4"
+                },
+                {
+                    "type": "string",
+                    "maxLength": 0
+                }
+            ]
+        },
+        "sshport": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535
+        }
+    },
+    "required": [
+        "uuid",
+        "enable",
+        "sendemail",
+        "comment",
+        "type",
+        "srcsharedfolderref",
+        "srcuri",
+        "destsharedfolderref",
+        "desturi",
+        "minute",
+        "everynminute",
+        "hour",
+        "everynhour",
+        "month",
+        "dayofmonth",
+        "everyndayofmonth",
+        "dayofweek",
+        "optionrecursive",
+        "optiontimes",
+        "optiongroup",
+        "optionowner",
+        "optioncompress",
+        "optionarchive",
+        "optiondelete",
+        "optionquiet",
+        "optionperms",
+        "optionacls",
+        "optionxattrs",
+        "optiondryrun",
+        "optionpartial",
+        "extraoptions",
+        "mode",
+        "authentication",
+        "password",
+        "sshcertificateref",
+        "sshport"
+    ]
+}

@@ -1,1 +1,26 @@
-{"type":"object","properties":{"name":{"type":"string"},"gid":{"type":"integer"},"comment":{"type":"string"},"members":{"type":"array","items":{"type":"string"}}},"required":["name","gid","comment","members"]}
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "gid": {
+            "type": "integer"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "members": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "name",
+        "gid",
+        "comment",
+        "members"
+    ]
+}

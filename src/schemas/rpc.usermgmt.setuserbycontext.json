@@ -1,1 +1,29 @@
-{"type":"object","properties":{"password":{"type":"string"},"email":{"type":"string","oneOf":[{"type":"string","format":"email"},{"type":"string","maxLength":0}]},"comment":{"type":"string"}},"required":["password","email","comment"]}
+{
+    "type": "object",
+    "properties": {
+        "password": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "email"
+                },
+                {
+                    "type": "string",
+                    "maxLength": 0
+                }
+            ]
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "password",
+        "email",
+        "comment"
+    ]
+}

@@ -1,1 +1,63 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"fsname":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"},{"type":"string","format":"dirpath"}]},"dir":{"type":"string"},"type":{"type":"string"},"opts":{"type":"string"},"freq":{"type":"integer"},"passno":{"type":"integer","enum":[0,1,2]},"usagewarnthreshold":{"type":"integer"},"comment":{"type":"string"}},"required":["uuid","fsname","dir","type","opts","freq","passno","usagewarnthreshold","comment"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "fsname": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "fsuuid"
+                },
+                {
+                    "type": "string",
+                    "format": "devicefile"
+                },
+                {
+                    "type": "string",
+                    "format": "dirpath"
+                }
+            ]
+        },
+        "dir": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "opts": {
+            "type": "string"
+        },
+        "freq": {
+            "type": "integer"
+        },
+        "passno": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2
+            ]
+        },
+        "usagewarnthreshold": {
+            "type": "integer"
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "uuid",
+        "fsname",
+        "dir",
+        "type",
+        "opts",
+        "freq",
+        "passno",
+        "usagewarnthreshold",
+        "comment"
+    ]
+}

@@ -1,1 +1,16 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"unused":{"type":"boolean"}},"required":["uuid","unused"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "unused": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "uuid",
+        "unused"
+    ]
+}

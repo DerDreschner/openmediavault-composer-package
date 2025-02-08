@@ -1,1 +1,62 @@
-{"type":"object","properties":{"version":{"type":"string"},"type":{"type":"string","enum":["navigation-item"]},"data":{"type":"object","properties":{"path":{"type":"string"},"position":{"type":"integer"},"text":{"type":"string"},"icon":{"type":"string"},"url":{"type":"string"},"permissions":{"type":"object","properties":{"role":{"type":"array","items":{"type":"string","enum":["admin","user"]}}}},"hidden":{"type":"boolean"}},"required":["path","text","icon","url"]}},"required":["version","type"]}
+{
+    "type": "object",
+    "properties": {
+        "version": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "navigation-item"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "path": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "integer"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                },
+                "permissions": {
+                    "type": "object",
+                    "properties": {
+                        "role": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "admin",
+                                    "user"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "hidden": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "path",
+                "text",
+                "icon",
+                "url"
+            ]
+        }
+    },
+    "required": [
+        "version",
+        "type"
+    ]
+}

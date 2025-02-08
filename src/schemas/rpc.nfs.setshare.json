@@ -1,1 +1,38 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"sharedfolderref":{"type":"string","format":"uuidv4"},"mntentref":{"type":"string","format":"uuidv4"},"client":{"type":"string"},"options":{"type":"string"},"extraoptions":{"type":"string"},"comment":{"type":"string"}},"required":["uuid","sharedfolderref","mntentref","client","options","extraoptions","comment"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "sharedfolderref": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "mntentref": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "client": {
+            "type": "string"
+        },
+        "options": {
+            "type": "string"
+        },
+        "extraoptions": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "uuid",
+        "sharedfolderref",
+        "mntentref",
+        "client",
+        "options",
+        "extraoptions",
+        "comment"
+    ]
+}

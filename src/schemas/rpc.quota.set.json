@@ -1,1 +1,53 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"quota":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"type":{"type":"string","enum":["user","group"]},"bhardlimit":{"type":"number","minimum":0},"bunit":{"type":"string","enum":["B","KiB","MiB","GiB","TiB","PiB","EiB"]}},"required":["name","type","bhardlimit","bunit"]}}},"required":["uuid","quota"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "quota": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "user",
+                            "group"
+                        ]
+                    },
+                    "bhardlimit": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "bunit": {
+                        "type": "string",
+                        "enum": [
+                            "B",
+                            "KiB",
+                            "MiB",
+                            "GiB",
+                            "TiB",
+                            "PiB",
+                            "EiB"
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "type",
+                    "bhardlimit",
+                    "bunit"
+                ]
+            }
+        }
+    },
+    "required": [
+        "uuid",
+        "quota"
+    ]
+}

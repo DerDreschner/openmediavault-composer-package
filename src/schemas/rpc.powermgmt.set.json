@@ -1,1 +1,20 @@
-{"type":"object","properties":{"cpufreq":{"type":"boolean"},"powerbtn":{"type":"string","enum":["nothing","shutdown","standby"]}},"required":["cpufreq","powerbtn"]}
+{
+    "type": "object",
+    "properties": {
+        "cpufreq": {
+            "type": "boolean"
+        },
+        "powerbtn": {
+            "type": "string",
+            "enum": [
+                "nothing",
+                "shutdown",
+                "standby"
+            ]
+        }
+    },
+    "required": [
+        "cpufreq",
+        "powerbtn"
+    ]
+}

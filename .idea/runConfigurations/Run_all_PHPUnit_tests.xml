@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run all PHPUnit tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+    <CommandLine parameters="-d memory_limit=256M" workingDirectory="$PROJECT_DIR$" />
+    <TestRunner directory="$PROJECT_DIR$/tests" />
+    <method v="2" />
+  </configuration>
+</component>

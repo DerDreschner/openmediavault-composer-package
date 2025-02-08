@@ -1,1 +1,16 @@
-{"type":"object","properties":{"devicefile":{"type":"string","format":"devicefile"},"type":{"type":"string"}},"required":["devicefile","type"]}
+{
+    "type": "object",
+    "properties": {
+        "devicefile": {
+            "type": "string",
+            "format": "devicefile"
+        },
+        "type": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "devicefile",
+        "type"
+    ]
+}

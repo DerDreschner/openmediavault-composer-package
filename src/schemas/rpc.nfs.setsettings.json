@@ -1,1 +1,25 @@
-{"type":"object","properties":{"enable":{"type":"boolean"},"versions":{"type":"array","items":{"type":"string","enum":["2","3","4","4.1","4.2"]}}},"required":["enable","versions"]}
+{
+    "type": "object",
+    "properties": {
+        "enable": {
+            "type": "boolean"
+        },
+        "versions": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "2",
+                    "3",
+                    "4",
+                    "4.1",
+                    "4.2"
+                ]
+            }
+        }
+    },
+    "required": [
+        "enable",
+        "versions"
+    ]
+}

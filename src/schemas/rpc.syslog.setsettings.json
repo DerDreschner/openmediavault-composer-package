@@ -1,1 +1,29 @@
-{"type":"object","properties":{"enable":{"type":"boolean"},"port":{"type":"integer","minimum":1,"maximum":65535},"host":{"type":"string"},"protocol":{"type":"string","enum":["udp","tcp"]}},"required":["enable","port","host","protocol"]}
+{
+    "type": "object",
+    "properties": {
+        "enable": {
+            "type": "boolean"
+        },
+        "port": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535
+        },
+        "host": {
+            "type": "string"
+        },
+        "protocol": {
+            "type": "string",
+            "enum": [
+                "udp",
+                "tcp"
+            ]
+        }
+    },
+    "required": [
+        "enable",
+        "port",
+        "host",
+        "protocol"
+    ]
+}

@@ -1,1 +1,70 @@
-{"type":"object","properties":{"name":{"type":"string","format":"username"},"uid":{"type":"integer"},"groups":{"type":"array","items":{"type":"string"}},"shell":{"type":"string"},"password":{"type":"string"},"email":{"type":"string","oneOf":[{"type":"string","format":"email"},{"type":"string","maxLength":0}]},"comment":{"type":"string"},"disallowusermod":{"type":"boolean"},"sshpubkeys":{"type":"array","items":{"type":"string","oneOf":[{"type":"string","format":"sshpubkey-rfc4716"},{"type":"string","format":"sshpubkey-openssh"}]}}},"required":["name","uid","groups","shell","password","email","comment","disallowusermod","sshpubkeys"]}
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "format": "username"
+        },
+        "uid": {
+            "type": "integer"
+        },
+        "groups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "shell": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "email"
+                },
+                {
+                    "type": "string",
+                    "maxLength": 0
+                }
+            ]
+        },
+        "comment": {
+            "type": "string"
+        },
+        "disallowusermod": {
+            "type": "boolean"
+        },
+        "sshpubkeys": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "type": "string",
+                        "format": "sshpubkey-rfc4716"
+                    },
+                    {
+                        "type": "string",
+                        "format": "sshpubkey-openssh"
+                    }
+                ]
+            }
+        }
+    },
+    "required": [
+        "name",
+        "uid",
+        "groups",
+        "shell",
+        "password",
+        "email",
+        "comment",
+        "disallowusermod",
+        "sshpubkeys"
+    ]
+}

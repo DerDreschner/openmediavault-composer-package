@@ -1,1 +1,24 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"name":{"type":"string"},"type":{"type":"string","enum":["user","group"]}},"required":["uuid","name","type"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "name": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "user",
+                "group"
+            ]
+        }
+    },
+    "required": [
+        "uuid",
+        "name",
+        "type"
+    ]
+}

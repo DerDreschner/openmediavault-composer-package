@@ -1,1 +1,71 @@
-{"type":"object","properties":{"version":{"type":"string"},"type":{"type":"string","enum":["route"]},"data":{"type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"breadcrumb":{"type":"object","properties":{"text":{"type":"string"},"request":{"type":"object","properties":{"service":{"type":"string"},"method":{"type":"string"},"params":{"type":"object"}},"required":["service","method"]}},"required":["text"]},"editing":{"type":"boolean"},"notificationTitle":{"type":"string"},"component":{"type":"string"}},"required":["url","component"]}},"required":["version","type"]}
+{
+    "type": "object",
+    "properties": {
+        "version": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "route"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "breadcrumb": {
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                            "type": "string"
+                        },
+                        "request": {
+                            "type": "object",
+                            "properties": {
+                                "service": {
+                                    "type": "string"
+                                },
+                                "method": {
+                                    "type": "string"
+                                },
+                                "params": {
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "service",
+                                "method"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "editing": {
+                    "type": "boolean"
+                },
+                "notificationTitle": {
+                    "type": "string"
+                },
+                "component": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "url",
+                "component"
+            ]
+        }
+    },
+    "required": [
+        "version",
+        "type"
+    ]
+}

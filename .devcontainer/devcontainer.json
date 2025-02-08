@@ -17,6 +17,10 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [8080],
 
+  "containerEnv": {
+    "COMPOSER_FUND": "0"
+  },
+
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "export PATH=\"${containerWorkspaceFolder}/usr/sbin:$PATH\"",
 

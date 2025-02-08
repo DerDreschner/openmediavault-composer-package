@@ -1,1 +1,31 @@
-{"type":"object","properties":{"id":{"type":"string","oneOf":[{"type":"string","format":"fsuuid"},{"type":"string","format":"devicefile"}]},"usagewarnthreshold":{"type":"number","minimum":0,"maximum":100},"comment":{"type":"string"}},"required":["id","usagewarnthreshold","comment"]}
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "fsuuid"
+                },
+                {
+                    "type": "string",
+                    "format": "devicefile"
+                }
+            ]
+        },
+        "usagewarnthreshold": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "usagewarnthreshold",
+        "comment"
+    ]
+}

@@ -1,1 +1,137 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"devicename":{"type":"string"},"method":{"type":"string","enum":["dhcp","static","manual"]},"address":{"type":"string"},"netmask":{"type":"string"},"gateway":{"type":"string"},"routemetric":{"type":"integer","minimum":0,"maximum":65535},"method6":{"type":"string","enum":["auto","static","manual","dhcp"]},"address6":{"type":"string"},"netmask6":{"type":"integer","minimum":0,"maximum":128},"gateway6":{"type":"string"},"routemetric6":{"type":"integer","minimum":0,"maximum":65535},"dnsnameservers":{"type":"string","pattern":"^((\\S+[,;]\\s*)*\\S+)?$"},"dnssearch":{"type":"string","pattern":"^((\\S+[,;]\\s*)*\\S+)?$"},"mtu":{"type":"integer","minimum":0,"maximum":65535},"wol":{"type":"boolean"},"comment":{"type":"string"},"slaves":{"type":"array","items":{"type":"string","pattern":"^((eth|venet)\\d+|(en|veth)\\S+)$"}},"bondprimary":{"type":"string"},"bondmode":{"type":"integer","enum":[0,1,2,3,4,5,6]},"bondmiimon":{"type":"integer","minimum":0},"bonddowndelay":{"type":"integer","minimum":0},"bondupdelay":{"type":"integer","minimum":0}},"required":["uuid","devicename","method","address","netmask","gateway","routemetric","method6","address6","netmask6","gateway6","routemetric6","dnsnameservers","dnssearch","mtu","wol","comment","slaves","bondprimary","bondmode","bondmiimon","bonddowndelay","bondupdelay"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "devicename": {
+            "type": "string"
+        },
+        "method": {
+            "type": "string",
+            "enum": [
+                "dhcp",
+                "static",
+                "manual"
+            ]
+        },
+        "address": {
+            "type": "string"
+        },
+        "netmask": {
+            "type": "string"
+        },
+        "gateway": {
+            "type": "string"
+        },
+        "routemetric": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+        },
+        "method6": {
+            "type": "string",
+            "enum": [
+                "auto",
+                "static",
+                "manual",
+                "dhcp"
+            ]
+        },
+        "address6": {
+            "type": "string"
+        },
+        "netmask6": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 128
+        },
+        "gateway6": {
+            "type": "string"
+        },
+        "routemetric6": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+        },
+        "dnsnameservers": {
+            "type": "string",
+            "pattern": "^((\\S+[,;]\\s*)*\\S+)?$"
+        },
+        "dnssearch": {
+            "type": "string",
+            "pattern": "^((\\S+[,;]\\s*)*\\S+)?$"
+        },
+        "mtu": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+        },
+        "wol": {
+            "type": "boolean"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "slaves": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "pattern": "^((eth|venet)\\d+|(en|veth)\\S+)$"
+            }
+        },
+        "bondprimary": {
+            "type": "string"
+        },
+        "bondmode": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        "bondmiimon": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "bonddowndelay": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "bondupdelay": {
+            "type": "integer",
+            "minimum": 0
+        }
+    },
+    "required": [
+        "uuid",
+        "devicename",
+        "method",
+        "address",
+        "netmask",
+        "gateway",
+        "routemetric",
+        "method6",
+        "address6",
+        "netmask6",
+        "gateway6",
+        "routemetric6",
+        "dnsnameservers",
+        "dnssearch",
+        "mtu",
+        "wol",
+        "comment",
+        "slaves",
+        "bondprimary",
+        "bondmode",
+        "bondmiimon",
+        "bonddowndelay",
+        "bondupdelay"
+    ]
+}

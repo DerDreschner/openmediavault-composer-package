@@ -1,1 +1,93 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"enable":{"type":"boolean"},"sharedfolderref":{"type":"string","format":"uuidv4"},"name":{"type":"string"},"comment":{"type":"string"},"uid":{"type":"string"},"gid":{"type":"string"},"readonly":{"type":"boolean"},"writeonly":{"type":"boolean"},"maxconnections":{"type":"integer","minimum":0},"list":{"type":"boolean"},"hostsallow":{"type":"string"},"hostsdeny":{"type":"string"},"authusers":{"type":"boolean"},"usechroot":{"type":"boolean"},"users":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"password":{"type":"string"}},"required":["name","password"]}},"extraoptions":{"type":"string"}},"required":["uuid","enable","sharedfolderref","name","comment","uid","gid","readonly","writeonly","maxconnections","list","hostsallow","hostsdeny","authusers","usechroot","users","extraoptions"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "enable": {
+            "type": "boolean"
+        },
+        "sharedfolderref": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "name": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "uid": {
+            "type": "string"
+        },
+        "gid": {
+            "type": "string"
+        },
+        "readonly": {
+            "type": "boolean"
+        },
+        "writeonly": {
+            "type": "boolean"
+        },
+        "maxconnections": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "list": {
+            "type": "boolean"
+        },
+        "hostsallow": {
+            "type": "string"
+        },
+        "hostsdeny": {
+            "type": "string"
+        },
+        "authusers": {
+            "type": "boolean"
+        },
+        "usechroot": {
+            "type": "boolean"
+        },
+        "users": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "password"
+                ]
+            }
+        },
+        "extraoptions": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "uuid",
+        "enable",
+        "sharedfolderref",
+        "name",
+        "comment",
+        "uid",
+        "gid",
+        "readonly",
+        "writeonly",
+        "maxconnections",
+        "list",
+        "hostsallow",
+        "hostsdeny",
+        "authusers",
+        "usechroot",
+        "users",
+        "extraoptions"
+    ]
+}

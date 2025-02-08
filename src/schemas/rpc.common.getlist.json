@@ -1,1 +1,43 @@
-{"type":"object","properties":{"start":{"type":"integer"},"limit":{"type":["integer","null"]},"sortfield":{"type":["string","null"]},"sortdir":{"type":["string","null"],"enum":["asc","ASC","desc","DESC"]},"search":{"type":["string","integer","null"]}},"required":["start","limit"]}
+{
+    "type": "object",
+    "properties": {
+        "start": {
+            "type": "integer"
+        },
+        "limit": {
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "sortfield": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "sortdir": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "enum": [
+                "asc",
+                "ASC",
+                "desc",
+                "DESC"
+            ]
+        },
+        "search": {
+            "type": [
+                "string",
+                "integer",
+                "null"
+            ]
+        }
+    },
+    "required": [
+        "start",
+        "limit"
+    ]
+}

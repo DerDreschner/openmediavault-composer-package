@@ -1,1 +1,86 @@
-{"type":"object","properties":{"version":{"type":"string"},"type":{"type":"string","enum":["dashboard-widget"]},"data":{"type":"object","properties":{"id":{"type":"string","format":"uuidv4"},"type":{"type":"string","enum":["grid","datatable","rrd","chart","text","value","system-information","filesystems-status"]},"title":{"type":"string"},"description":{"type":"string"},"i18n":{"type":"array","items":{"type":"string"}},"permissions":{"type":"object","properties":{"role":{"type":"array","items":{"type":"string","enum":["admin","user"]}}}},"chart":{"type":"object"},"grid":{"type":"object"},"datatable":{"type":"object"},"rrd":{"type":"object"}},"required":["id","type","title","description","i18n"]}},"required":["version","type"]}
+{
+    "type": "object",
+    "properties": {
+        "version": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "dashboard-widget"
+            ]
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuidv4"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "grid",
+                        "datatable",
+                        "rrd",
+                        "chart",
+                        "text",
+                        "value",
+                        "system-information",
+                        "filesystems-status"
+                    ]
+                },
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "i18n": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "permissions": {
+                    "type": "object",
+                    "properties": {
+                        "role": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "admin",
+                                    "user"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "chart": {
+                    "type": "object"
+                },
+                "grid": {
+                    "type": "object"
+                },
+                "datatable": {
+                    "type": "object"
+                },
+                "rrd": {
+                    "type": "object"
+                }
+            },
+            "required": [
+                "id",
+                "type",
+                "title",
+                "description",
+                "i18n"
+            ]
+        }
+    },
+    "required": [
+        "version",
+        "type"
+    ]
+}

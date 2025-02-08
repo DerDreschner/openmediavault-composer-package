@@ -1,1 +1,41 @@
-{"type":"object","properties":{"enable":{"type":"boolean"},"port":{"type":"integer","minimum":1,"maximum":65535},"passwordauthentication":{"type":"boolean"},"pubkeyauthentication":{"type":"boolean"},"permitrootlogin":{"type":"boolean"},"tcpforwarding":{"type":"boolean"},"compression":{"type":"boolean"},"extraoptions":{"type":"string"}},"required":["enable","port","passwordauthentication","pubkeyauthentication","permitrootlogin","tcpforwarding","compression","extraoptions"]}
+{
+    "type": "object",
+    "properties": {
+        "enable": {
+            "type": "boolean"
+        },
+        "port": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535
+        },
+        "passwordauthentication": {
+            "type": "boolean"
+        },
+        "pubkeyauthentication": {
+            "type": "boolean"
+        },
+        "permitrootlogin": {
+            "type": "boolean"
+        },
+        "tcpforwarding": {
+            "type": "boolean"
+        },
+        "compression": {
+            "type": "boolean"
+        },
+        "extraoptions": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "enable",
+        "port",
+        "passwordauthentication",
+        "pubkeyauthentication",
+        "permitrootlogin",
+        "tcpforwarding",
+        "compression",
+        "extraoptions"
+    ]
+}

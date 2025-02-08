@@ -1,1 +1,24 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"certificate":{"type":"string"},"privatekey":{"type":"string"},"comment":{"type":"string"}},"required":["uuid","certificate","privatekey","comment"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "certificate": {
+            "type": "string"
+        },
+        "privatekey": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "uuid",
+        "certificate",
+        "privatekey",
+        "comment"
+    ]
+}

@@ -1,1 +1,37 @@
-{"type":"object","properties":{"port":{"type":"integer","minimum":1,"maximum":65535},"enablessl":{"type":"boolean"},"sslport":{"type":"integer","minimum":1,"maximum":65535},"forcesslonly":{"type":"boolean"},"sslcertificateref":{"type":"string"},"timeout":{"type":"integer","minimum":0,"maximum":1440}},"required":["port","enablessl","sslport","forcesslonly","sslcertificateref","timeout"]}
+{
+    "type": "object",
+    "properties": {
+        "port": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535
+        },
+        "enablessl": {
+            "type": "boolean"
+        },
+        "sslport": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535
+        },
+        "forcesslonly": {
+            "type": "boolean"
+        },
+        "sslcertificateref": {
+            "type": "string"
+        },
+        "timeout": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1440
+        }
+    },
+    "required": [
+        "port",
+        "enablessl",
+        "sslport",
+        "forcesslonly",
+        "sslcertificateref",
+        "timeout"
+    ]
+}

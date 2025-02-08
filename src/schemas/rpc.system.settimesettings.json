@@ -1,1 +1,23 @@
-{"type":"object","properties":{"timezone":{"type":"string"},"ntpenable":{"type":"boolean"},"ntptimeservers":{"type":"string"},"ntpclients":{"type":"string"}},"required":["timezone","ntpenable","ntptimeservers","ntpclients"]}
+{
+    "type": "object",
+    "properties": {
+        "timezone": {
+            "type": "string"
+        },
+        "ntpenable": {
+            "type": "boolean"
+        },
+        "ntptimeservers": {
+            "type": "string"
+        },
+        "ntpclients": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "timezone",
+        "ntpenable",
+        "ntptimeservers",
+        "ntpclients"
+    ]
+}

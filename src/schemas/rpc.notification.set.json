@@ -1,1 +1,20 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"id":{"type":"string"},"enable":{"type":"boolean"}},"required":["uuid","id","enable"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "id": {
+            "type": "string"
+        },
+        "enable": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "uuid",
+        "id",
+        "enable"
+    ]
+}

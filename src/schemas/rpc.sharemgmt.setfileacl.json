@@ -1,1 +1,130 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"file":{"type":"string"},"recursive":{"type":"boolean"},"replace":{"type":"boolean"},"owner":{"type":"string"},"group":{"type":"string"},"userperms":{"type":"integer","enum":[0,1,2,3,4,5,6,7]},"groupperms":{"type":"integer","enum":[0,1,2,3,4,5,6,7]},"otherperms":{"type":"integer","enum":[0,1,2,3,4,5,6,7]},"users":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"perms":{"type":"integer","enum":[0,1,2,3,4,5,6,7]}},"required":["name","perms"]}},"groups":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"perms":{"type":"integer","enum":[0,1,2,3,4,5,6,7]}},"required":["name","perms"]}}},"required":["uuid","file","recursive","replace","owner","group","userperms","groupperms","otherperms"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "file": {
+            "type": "string"
+        },
+        "recursive": {
+            "type": "boolean"
+        },
+        "replace": {
+            "type": "boolean"
+        },
+        "owner": {
+            "type": "string"
+        },
+        "group": {
+            "type": "string"
+        },
+        "userperms": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "groupperms": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "otherperms": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        "users": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "perms": {
+                        "type": "integer",
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "perms"
+                ]
+            }
+        },
+        "groups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "perms": {
+                        "type": "integer",
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "perms"
+                ]
+            }
+        }
+    },
+    "required": [
+        "uuid",
+        "file",
+        "recursive",
+        "replace",
+        "owner",
+        "group",
+        "userperms",
+        "groupperms",
+        "otherperms"
+    ]
+}

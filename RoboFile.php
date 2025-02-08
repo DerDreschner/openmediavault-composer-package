@@ -1,36 +1,73 @@
 <?php
 
-const DATAMODEL_DIRECTORY_PATH = "./src/datamodels";
-const SCHEMES_DIRECTORY_PATH = "./src/schemas";
-const MK_WORKBENCH_PATH = "./omv-mkworkbench";
-
-use Ahc\Json\Comment;
+use DerDreschner\OpenMediaVault\ComposerPackage\SchemeExtractor;
 use Robo\Tasks;
 
 require_once("vendor/autoload.php");
-require_once("SchemeExtractor.php");
+
+const PHP_EXPORT_DIRECTORY = "./src/openmediavault";
+const SCHEMES_EXPORT_DIRECTORY = "./src/schemas";
+const OMV_CLONE_DIRECTORY = "./openmediavault";
+const OMV_DATA_MODELS_DIRECTORY = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/share/openmediavault/datamodels";
+const OMV_MAKE_WORKBENCH_FILE = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/sbin/omv-mkworkbench";
+const OMV_PHP_DIRECTORY = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/share/php/openmediavault";
 
 class RoboFile extends Tasks
 {
-    public function GenerateJsonSchemes(): void
+    /**
+     * @command update-files
+     */
+    public function ProcessOpenMediaVaultFiles(): void
     {
-        $this->CleanSchemasDirectory();
+        $this->CheckoutOpenMediaVaultRepository();
+        $this->CopyOpenMediaVaultPhpFiles();
+        $this->GenerateOpenMediaVaultJsonSchemes();
+        $this->UpdateComposerAutoloader();
+    }
+
+    /**
+     * @command openmediavault:checkout-git-repository
+     */
+    public function CheckoutOpenMediaVaultRepository(): void
+    {
+        $this->_deleteDir(OMV_CLONE_DIRECTORY);
+
+        $this->taskGitStack()
+            ->cloneShallow("https://github.com/openmediavault/openmediavault", OMV_CLONE_DIRECTORY)
+            ->run();
+    }
+
+    /**
+     * @command openmediavault:copy-php-files
+     */
+    public function CopyOpenMediaVaultPhpFiles(): void
+    {
+        $this->_cleanDir(PHP_EXPORT_DIRECTORY);
+        $this->_copyDir(OMV_PHP_DIRECTORY, PHP_EXPORT_DIRECTORY);
+    }
+
+    /**
+     * @command openmediavault:generate-json-schemes
+     */
+    public function GenerateOpenMediaVaultJsonSchemes(): void
+    {
+        $this->_cleanDir(SCHEMES_EXPORT_DIRECTORY);
 
         $extractor = new SchemeExtractor();
-        $extractor->ProcessRpcFiles();
-        $extractor->ProcessMkWorkbenchFile();
+        $extractor->ProcessRpcFiles(OMV_DATA_MODELS_DIRECTORY, SCHEMES_EXPORT_DIRECTORY);
+        $extractor->processMkWorkbenchFile(OMV_MAKE_WORKBENCH_FILE, SCHEMES_EXPORT_DIRECTORY);
     }
 
-    public function CleanSchemasDirectory(): void
+    public function UpdateComposerAutoloader(): void
     {
-        $this->_cleanDir(SCHEMES_DIRECTORY_PATH);
+        $this->taskComposerDumpAutoload()
+            ->run();
     }
 
-    public function RunTests() {
-        $this->CleanSchemasDirectory();
-
+    public function RunTests(): void
+    {
         $this->taskPhpUnit()
-            ->file("./tests/RoboTest.php")
+            ->file("./tests/*")
             ->run();
     }
 }

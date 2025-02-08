@@ -1,1 +1,42 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"devicefile":{"type":"string","format":"devicefile"},"apm":{"type":"integer","minimum":0,"maximum":255},"aam":{"type":"integer","enum":[0,128,254]},"spindowntime":{"type":"integer","minimum":0,"maximum":254},"writecache":{"type":"boolean"}},"required":["uuid","devicefile","apm","aam","spindowntime","writecache"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "devicefile": {
+            "type": "string",
+            "format": "devicefile"
+        },
+        "apm": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        },
+        "aam": {
+            "type": "integer",
+            "enum": [
+                0,
+                128,
+                254
+            ]
+        },
+        "spindowntime": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 254
+        },
+        "writecache": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "uuid",
+        "devicefile",
+        "apm",
+        "aam",
+        "spindowntime",
+        "writecache"
+    ]
+}

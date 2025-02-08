@@ -1,1 +1,96 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"enable":{"type":"boolean"},"sharedfolderref":{"type":"string","format":"uuidv4"},"comment":{"type":"string"},"guest":{"type":"string","enum":["no","allow","only"]},"readonly":{"type":"boolean"},"browseable":{"type":"boolean"},"recyclebin":{"type":"boolean"},"recyclemaxsize":{"type":"integer","minimum":0},"recyclemaxage":{"type":"integer","minimum":0},"hidedotfiles":{"type":"boolean"},"inheritacls":{"type":"boolean"},"inheritpermissions":{"type":"boolean"},"easupport":{"type":"boolean"},"storedosattributes":{"type":"boolean"},"hostsallow":{"type":"string"},"hostsdeny":{"type":"string"},"audit":{"type":"boolean"},"timemachine":{"type":"boolean","default":false},"extraoptions":{"type":"string"}},"required":["uuid","enable","sharedfolderref","comment","guest","readonly","browseable","recyclebin","recyclemaxsize","recyclemaxage","hidedotfiles","inheritacls","inheritpermissions","easupport","storedosattributes","hostsallow","hostsdeny","audit","extraoptions"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "enable": {
+            "type": "boolean"
+        },
+        "sharedfolderref": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "guest": {
+            "type": "string",
+            "enum": [
+                "no",
+                "allow",
+                "only"
+            ]
+        },
+        "readonly": {
+            "type": "boolean"
+        },
+        "browseable": {
+            "type": "boolean"
+        },
+        "recyclebin": {
+            "type": "boolean"
+        },
+        "recyclemaxsize": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "recyclemaxage": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "hidedotfiles": {
+            "type": "boolean"
+        },
+        "inheritacls": {
+            "type": "boolean"
+        },
+        "inheritpermissions": {
+            "type": "boolean"
+        },
+        "easupport": {
+            "type": "boolean"
+        },
+        "storedosattributes": {
+            "type": "boolean"
+        },
+        "hostsallow": {
+            "type": "string"
+        },
+        "hostsdeny": {
+            "type": "string"
+        },
+        "audit": {
+            "type": "boolean"
+        },
+        "timemachine": {
+            "type": "boolean",
+            "default": false
+        },
+        "extraoptions": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "uuid",
+        "enable",
+        "sharedfolderref",
+        "comment",
+        "guest",
+        "readonly",
+        "browseable",
+        "recyclebin",
+        "recyclemaxsize",
+        "recyclemaxage",
+        "hidedotfiles",
+        "inheritacls",
+        "inheritpermissions",
+        "easupport",
+        "storedosattributes",
+        "hostsallow",
+        "hostsdeny",
+        "audit",
+        "extraoptions"
+    ]
+}

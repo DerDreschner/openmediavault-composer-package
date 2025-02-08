@@ -1,1 +1,62 @@
-{"type":"object","properties":{"enable":{"type":"boolean"},"workgroup":{"type":"string"},"serverstring":{"type":"string"},"loglevel":{"type":"integer","enum":[0,1,2,3,10]},"usesendfile":{"type":"boolean"},"aio":{"type":"boolean"},"timeserver":{"type":"boolean"},"winssupport":{"type":"boolean"},"winsserver":{"type":"string"},"homesenable":{"type":"boolean"},"homesbrowseable":{"type":"boolean"},"extraoptions":{"type":"string"}},"required":["enable","workgroup","serverstring","loglevel","usesendfile","aio","timeserver","winssupport","winsserver","homesenable","homesbrowseable","extraoptions"]}
+{
+    "type": "object",
+    "properties": {
+        "enable": {
+            "type": "boolean"
+        },
+        "workgroup": {
+            "type": "string"
+        },
+        "serverstring": {
+            "type": "string"
+        },
+        "loglevel": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                10
+            ]
+        },
+        "usesendfile": {
+            "type": "boolean"
+        },
+        "aio": {
+            "type": "boolean"
+        },
+        "timeserver": {
+            "type": "boolean"
+        },
+        "winssupport": {
+            "type": "boolean"
+        },
+        "winsserver": {
+            "type": "string"
+        },
+        "homesenable": {
+            "type": "boolean"
+        },
+        "homesbrowseable": {
+            "type": "boolean"
+        },
+        "extraoptions": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "enable",
+        "workgroup",
+        "serverstring",
+        "loglevel",
+        "usesendfile",
+        "aio",
+        "timeserver",
+        "winssupport",
+        "winsserver",
+        "homesenable",
+        "homesbrowseable",
+        "extraoptions"
+    ]
+}

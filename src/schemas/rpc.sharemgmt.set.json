@@ -1,1 +1,41 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"name":{"type":"string"},"reldirpath":{"type":"string"},"comment":{"type":"string"},"mntentref":{"type":"string","format":"uuidv4"},"mode":{"type":"string","enum":["700","750","755","770","775","777"]}},"required":["uuid","name","reldirpath","comment","mntentref","mode"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "name": {
+            "type": "string"
+        },
+        "reldirpath": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "mntentref": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "mode": {
+            "type": "string",
+            "enum": [
+                "700",
+                "750",
+                "755",
+                "770",
+                "775",
+                "777"
+            ]
+        }
+    },
+    "required": [
+        "uuid",
+        "name",
+        "reldirpath",
+        "comment",
+        "mntentref",
+        "mode"
+    ]
+}

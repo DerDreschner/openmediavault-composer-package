@@ -1,1 +1,11 @@
-{"type":"object","properties":{"enable":{"type":"boolean"}},"required":["enable"]}
+{
+    "type": "object",
+    "properties": {
+        "enable": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "enable"
+    ]
+}

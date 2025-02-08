@@ -1,1 +1,42 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"name":{"type":"string"},"type":{"type":"string","enum":["user","group"]},"bhardlimit":{"type":"number","minimum":0},"bunit":{"type":"string","enum":["B","KiB","MiB","GiB","TiB","PiB","EiB"]}},"required":["uuid","name","type","bhardlimit","bunit"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "name": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "user",
+                "group"
+            ]
+        },
+        "bhardlimit": {
+            "type": "number",
+            "minimum": 0
+        },
+        "bunit": {
+            "type": "string",
+            "enum": [
+                "B",
+                "KiB",
+                "MiB",
+                "GiB",
+                "TiB",
+                "PiB",
+                "EiB"
+            ]
+        }
+    },
+    "required": [
+        "uuid",
+        "name",
+        "type",
+        "bhardlimit",
+        "bunit"
+    ]
+}

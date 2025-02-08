@@ -1,1 +1,21 @@
-{"type":"object","properties":{"enable":{"type":"boolean"},"port":{"type":"integer","minimum":1,"maximum":65535},"extraoptions":{"type":"string"}},"required":["enable","port","extraoptions"]}
+{
+    "type": "object",
+    "properties": {
+        "enable": {
+            "type": "boolean"
+        },
+        "port": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535
+        },
+        "extraoptions": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "enable",
+        "port",
+        "extraoptions"
+    ]
+}

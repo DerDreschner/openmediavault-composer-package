@@ -1,1 +1,24 @@
-{"type":"object","properties":{"uuid":{"type":"string","format":"uuidv4"},"type":{"type":"string","enum":["mntent","sharedfolder"]},"path":{"type":"string"}},"required":["uuid","type","path"]}
+{
+    "type": "object",
+    "properties": {
+        "uuid": {
+            "type": "string",
+            "format": "uuidv4"
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "mntent",
+                "sharedfolder"
+            ]
+        },
+        "path": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "uuid",
+        "type",
+        "path"
+    ]
+}
