@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "rpc"
+            ]
+        },
+        "id": {
+            "type": "string"
+        },
+        "alias": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "params": {
+            "type": [
+                "array",
+                "boolean",
+                "integer",
+                "null",
+                "number",
+                "object",
+                "string"
+            ]
+        }
+    },
+    "required": [
+        "type",
+        "id",
+        "alias",
+        "description",
+        "params"
+    ]
+}

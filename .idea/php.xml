@@ -85,6 +85,11 @@
       <path value="$PROJECT_DIR$/vendor/phpowermove/docblock" />
       <path value="$PROJECT_DIR$/vendor/mikey179/vfsstream" />
       <path value="$PROJECT_DIR$/vendor/jetbrains/phpstorm-attributes" />
+      <path value="$PROJECT_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/composer" />
+      <path value="$PROJECT_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/twig/twig" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

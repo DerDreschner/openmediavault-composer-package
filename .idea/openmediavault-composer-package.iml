@@ -73,6 +73,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/opis/uri" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jetbrains/phpstorm-attributes" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mikey179/vfsstream" />
+      <excludeFolder url="file://$MODULE_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/openmediavault/deb/openmediavault-k8s/usr/share/php/openmediavault/vendor/twig/twig" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

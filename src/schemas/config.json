@@ -1,0 +1,74 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "config"
+            ]
+        },
+        "id": {
+            "type": "string"
+        },
+        "alias": {
+            "type": "string"
+        },
+        "persistent": {
+            "type": "boolean"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "notificationid": {
+            "type": "string"
+        },
+        "properties": {
+            "type": [
+                "array",
+                "boolean",
+                "integer",
+                "null",
+                "number",
+                "object",
+                "string"
+            ]
+        },
+        "queryinfo": {
+            "type": "object",
+            "properties": {
+                "xpath": {
+                    "type": "string"
+                },
+                "iterable": {
+                    "type": "boolean"
+                },
+                "idproperty": {
+                    "type": "string"
+                },
+                "refproperty": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "xpath",
+                "iterable",
+                "idproperty",
+                "refproperty"
+            ]
+        }
+    },
+    "required": [
+        "type",
+        "id",
+        "alias",
+        "persistent",
+        "title",
+        "description",
+        "notificationid",
+        "properties",
+        "queryinfo"
+    ]
+}

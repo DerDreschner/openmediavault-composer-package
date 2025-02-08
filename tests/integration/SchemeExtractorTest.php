@@ -34,9 +34,9 @@ final class SchemeExtractorTest extends JsonTestsFixture
 
     #[Test]
     #[DataProvider('allJsonSchemeVersions')]
-    public function extractedRpcSchemesAreValid(#[ExpectedValues(JSON_SCHEMES_TO_TEST_AGAINST)] string $jsonSchemeVersion): void
+    public function extractedPredefinedRpcSchemesAreValid(#[ExpectedValues(JSON_SCHEMES_TO_TEST_AGAINST)] string $jsonSchemeVersion): void
     {
-        $this->extractor->ProcessRpcFiles(OMV_DATA_MODELS_DIRECTORY, $this->virtualDirectory->url());
+        $this->extractor->ProcessPredefinedRpcFiles(OMV_DATA_MODELS_DIRECTORY, $this->virtualDirectory->url());
         $this->validateJsonFilesInOutputDirectory($jsonSchemeVersion);
     }
 
@@ -46,6 +46,22 @@ final class SchemeExtractorTest extends JsonTestsFixture
     public function extractedUiSchemesAreValid(#[ExpectedValues(JSON_SCHEMES_TO_TEST_AGAINST)] string $jsonSchemeVersion): void
     {
         $this->extractor->processMkWorkbenchFile(OMV_MAKE_WORKBENCH_FILE, $this->virtualDirectory->url());
+        $this->validateJsonFilesInOutputDirectory($jsonSchemeVersion);
+    }
+
+    #[Test]
+    #[DataProvider('allJsonSchemeVersions')]
+    public function extractedConfigSchemeIsValid(#[ExpectedValues(JSON_SCHEMES_TO_TEST_AGAINST)] string $jsonSchemeVersion): void
+    {
+        $this->extractor->extractAndExportConfigScheme(OMV_DATA_MODELS_README_FILE, $this->virtualDirectory->url());
+        $this->validateJsonFilesInOutputDirectory($jsonSchemeVersion);
+    }
+
+    #[Test]
+    #[DataProvider('allJsonSchemeVersions')]
+    public function extractedGeneralRpcSchemeIsValid(#[ExpectedValues(JSON_SCHEMES_TO_TEST_AGAINST)] string $jsonSchemeVersion): void
+    {
+        $this->extractor->extractAndExportGeneralRpcScheme(OMV_DATA_MODELS_README_FILE, $this->virtualDirectory->url());
         $this->validateJsonFilesInOutputDirectory($jsonSchemeVersion);
     }
 

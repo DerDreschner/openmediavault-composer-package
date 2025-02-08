@@ -45,6 +45,30 @@ class SchemeExtractor
         $this->exportJsonScheme($type, $scheme, $outputDirectory);
     }
 
+    public function extractAndExportConfigScheme(string $filePath, string $outputDirectory): void
+    {
+        print("Extracting and exporting config scheme" . PHP_EOL);
+        $file = file_get_contents($filePath);
+
+        $schemeStart = "Configuration object\n================================================================================\n\nSchema\n======\n";
+        $startOfJson = substr($file, strpos($file, $schemeStart) + strlen($schemeStart));
+        $json = json_decode(substr($startOfJson, 0, strpos($startOfJson, "\n\n")), true);
+
+        $this->exportJsonScheme("config", $json, $outputDirectory);
+    }
+
+    public function extractAndExportGeneralRpcScheme(string $filePath, string $outputDirectory): void
+    {
+        print("Extracting and exporting general RPC scheme" . PHP_EOL);
+        $file = file_get_contents($filePath);
+
+        $schemeStart = "RPC\n================================================================================\n\nSchema\n======\n";
+        $startOfJson = substr($file, strpos($file, $schemeStart) + strlen($schemeStart));
+        $json = json_decode(substr($startOfJson, 0, strpos($startOfJson, "\n\n")), true);
+
+        $this->exportJsonScheme("rpc", $json, $outputDirectory);
+    }
+
     public function exportJsonScheme(string $type, array $content, string $outputDirectory): void
     {
         $this->convertDraft3JsonSchema($content);
@@ -57,14 +81,14 @@ class SchemeExtractor
         file_put_contents($filepath, $attributes);
     }
 
-    public function ProcessRpcFiles(string $dataModelDirectoryPath, string $exportDirectoryPath): void
+    public function ProcessPredefinedRpcFiles(string $dataModelDirectoryPath, string $exportDirectoryPath): void
     {
         $isRpcFile = function ($callback): bool {
             return !is_dir($callback) && preg_match("/^rpc\..+\.json$/", $callback);
         };
 
         $exportSchemes = function ($filename) use ($dataModelDirectoryPath, $exportDirectoryPath): void {
-            $this->extractAndExportRpcSchemes($dataModelDirectoryPath . DIRECTORY_SEPARATOR . $filename, $exportDirectoryPath);
+            $this->extractAndExportPredefinedRpcSchemes($dataModelDirectoryPath . DIRECTORY_SEPARATOR . $filename, $exportDirectoryPath);
         };
 
         $rpcSchemes = collect(scandir($dataModelDirectoryPath));
@@ -74,7 +98,8 @@ class SchemeExtractor
             ->each($exportSchemes);
     }
 
-    public function extractAndExportRpcSchemes(string $filePath, string $outputDirectory): void
+
+    public function extractAndExportPredefinedRpcSchemes(string $filePath, string $outputDirectory): void
     {
         print("Extracting and exporting RPC schemes from $filePath" . PHP_EOL);
         $content = collect(Comment::parseFromFile($filePath, true));
