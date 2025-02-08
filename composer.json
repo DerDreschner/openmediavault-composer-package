@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "classmap": [
-      "src/openmediavault"
+      "src/php"
     ]
   },
   "autoload-dev": {
@@ -23,8 +23,7 @@
     "classmap": ["src/SchemeExtractor.php"]
   },
   "include-path": [
-    ".",
-    "src/openmediavault"
+    "src/php"
   ],
   "archive": {
     "exclude": [".devcontainer", "/src/SchemeExtractor.php", "/tests", "RoboFile.php"]

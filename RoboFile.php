@@ -4,13 +4,13 @@ require_once("vendor/autoload.php");
 use DerDreschner\OpenMediaVault\ComposerPackage\SchemeExtractor;
 use Robo\Tasks;
 
-const PHP_EXPORT_DIRECTORY = "./src/openmediavault";
+const PHP_EXPORT_DIRECTORY = "./src/php";
 const SCHEMES_EXPORT_DIRECTORY = "./src/schemas";
 const OMV_CLONE_DIRECTORY = "./openmediavault";
 const OMV_DATA_MODELS_DIRECTORY = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/share/openmediavault/datamodels";
 const OMV_DATA_MODELS_README_FILE = OMV_DATA_MODELS_DIRECTORY . "/README";
 const OMV_MAKE_WORKBENCH_FILE = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/sbin/omv-mkworkbench";
-const OMV_PHP_DIRECTORY = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/share/php/openmediavault";
+const OMV_PHP_DIRECTORY = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/share/php";
 
 class RoboFile extends Tasks
 {
