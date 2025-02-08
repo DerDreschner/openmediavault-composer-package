@@ -11,8 +11,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use function PHPUnit\Framework\assertTrue;
 
-const DATAMODEL_DIRECTORY_PATH = "./src/datamodels";
-const MK_WORKBENCH_PATH = "./omv-mkworkbench";
+require_once("RoboFile.php");
 
 const JSON_SCHEMES_TO_TEST_AGAINST = [
     "http://json-schema.org/draft-06/schema#",
@@ -37,7 +36,7 @@ final class SchemeExtractorTest extends JsonTestsFixture
     #[DataProvider('allJsonSchemeVersions')]
     public function extractedRpcSchemesAreValid(#[ExpectedValues(JSON_SCHEMES_TO_TEST_AGAINST)] string $jsonSchemeVersion): void
     {
-        $this->extractor->ProcessRpcFiles(DATAMODEL_DIRECTORY_PATH, $this->virtualDirectory->url());
+        $this->extractor->ProcessRpcFiles(OMV_DATA_MODELS_DIRECTORY, $this->virtualDirectory->url());
         $this->validateJsonFilesInOutputDirectory($jsonSchemeVersion);
     }
 
@@ -46,7 +45,7 @@ final class SchemeExtractorTest extends JsonTestsFixture
     #[DataProvider('allJsonSchemeVersions')]
     public function extractedUiSchemesAreValid(#[ExpectedValues(JSON_SCHEMES_TO_TEST_AGAINST)] string $jsonSchemeVersion): void
     {
-        $this->extractor->processMkWorkbenchFile(MK_WORKBENCH_PATH, $this->virtualDirectory->url());
+        $this->extractor->processMkWorkbenchFile(OMV_MAKE_WORKBENCH_FILE, $this->virtualDirectory->url());
         $this->validateJsonFilesInOutputDirectory($jsonSchemeVersion);
     }
 

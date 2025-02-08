@@ -1,9 +1,8 @@
 <?php
+require_once("vendor/autoload.php");
 
 use DerDreschner\OpenMediaVault\ComposerPackage\SchemeExtractor;
 use Robo\Tasks;
-
-require_once("vendor/autoload.php");
 
 const PHP_EXPORT_DIRECTORY = "./src/openmediavault";
 const SCHEMES_EXPORT_DIRECTORY = "./src/schemas";
@@ -15,7 +14,7 @@ const OMV_PHP_DIRECTORY = OMV_CLONE_DIRECTORY . "/deb/openmediavault/usr/share/p
 class RoboFile extends Tasks
 {
     /**
-     * @command update-files
+     * @command update-repository
      */
     public function ProcessOpenMediaVaultFiles(): void
     {
@@ -64,8 +63,15 @@ class RoboFile extends Tasks
             ->run();
     }
 
+    /**
+     * @command run-tests
+     */
     public function RunTests(): void
     {
+        if(!is_dir(OMV_CLONE_DIRECTORY)) {
+            $this->CheckoutOpenMediaVaultRepository();
+        }
+
         $this->taskPhpUnit()
             ->file("./tests/*")
             ->run();

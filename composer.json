@@ -19,9 +19,11 @@
       "DerDreschner\\OpenMediaVault\\ComposerPackage\\Tests\\Fixtures\\": "tests/fixture",
       "DerDreschner\\OpenMediaVault\\ComposerPackage\\Tests\\UnitTests\\": "tests/unit",
       "DerDreschner\\OpenMediaVault\\ComposerPackage\\Tests\\IntegrationTests\\": "tests/integration"
-    }
+    },
+    "classmap": ["src/SchemeExtractor.php"]
   },
   "include-path": [
+    ".",
     "src/openmediavault"
   ],
   "archive": {
